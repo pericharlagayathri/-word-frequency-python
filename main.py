@@ -1,0 +1,16 @@
+# Unit IV - Experiment 39: Count word frequency using a dictionary
+
+sentence = input("Enter a sentence: ")
+
+words = sentence.lower().split()
+frequency = {}
+
+for word in words:
+    if word in frequency:
+        frequency[word] = frequency[word] + 1
+    else:
+        frequency[word] = 1
+
+print("Word frequency:")
+for word in frequency:
+    print(word, ":", frequency[word])
